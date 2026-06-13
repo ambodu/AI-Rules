@@ -37,3 +37,4 @@
 | **11** | **[Journal MVP](./11-journal-mvp.md)** | **Gate-UX闭环：用UX数据验证反馈机制本身是否正确** |
 | **12** | **[集成+Capability](./12-integration-capability.md)** | **L0能力检查 + Gate-Journal集成 + 7个E2E测试** |
 | **13** | **[Claude Judge](./13-claude-judge.md)** | **双模型并行验收 + 分歧处理 + 模型多样性验证** |
+| **14** | **[PM 日常工作流](./14-daily-workflow.md)** | **三个真实场景：Bug验收/Spec评审/Eval会议** |
