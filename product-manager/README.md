@@ -35,3 +35,4 @@
 > **但操作系统存在的唯一意义，是让上面的应用让用户的生活变得更好。**
 | **10** | **[Day 1 Bootstrap](./10-bootstrap-day1.md)** | **10分钟跑起第一个Gate（含完整代码）** |
 | **11** | **[Journal MVP](./11-journal-mvp.md)** | **Gate-UX闭环：用UX数据验证反馈机制本身是否正确** |
+| **12** | **[集成+Capability](./12-integration-capability.md)** | **L0能力检查 + Gate-Journal集成 + 7个E2E测试** |
