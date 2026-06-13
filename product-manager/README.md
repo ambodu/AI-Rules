@@ -1,17 +1,37 @@
-# AI 产品经理方法论 v2
+# AI 产品操作系统 (AI Product OS) v3
 
-更深度的调研版本。聚焦两个核心命题的落地实践：
+以操作系统架构为心智模型，重新设计 AI 产品经理的反馈机制与产品正确性体系。
 
-1. **反馈机制** — 什么样的设计保证反馈正确，最终产品正确？
-2. **产品设计** — 如何设计产品保证正确性，最终达成更好用户体验？
+## 核心类比
+
+| OS 概念 | AI PM 映射 |
+|---------|-----------|
+| **Kernel / Userspace** | 独立验收层 / 执行层 |
+| **System Call Gate** | 所有 AI 产出的验证关口 |
+| **MLFQ Scheduler** | 任务优先级 + 僵尸回收 |
+| **Virtual Memory** | 分层上下文管理 (Hot/Warm/Cold) |
+| **Watchdog Timer** | 熔断器 + 预算执行 + 循环检测 |
+| **Supervisor (init)** | Agent 生命周期治理 (fork/exec/kill) |
+| **Journaling FS** | 不可变审计追踪 |
+| **Signals / IPC** | Agent 间事件驱动通信 |
+| **POSIX** | 标准化验收接口 |
 
 ## 文档索引
 
-| 序号 | 文档 | 核心内容 |
-|------|------|----------|
-| 01 | [AI PM 角色转型](./01-ai-pm-role-transformation.md) | 从"提需求者"到"治理者/Builder-PM" |
-| 02 | [反馈回路架构](./02-feedback-loop-architecture.md) | Loop/Harness/Memory 三层架构 + 数据飞轮 |
-| 03 | [独立验证体系](./03-independent-verification-systems.md) | 8种验证架构的实际实现 |
-| 04 | [评测框架设计](./04-evaluation-framework.md) | 1+3评测法 + 三层漏斗指标 + 评测集构建 |
-| 05 | [产品正确性设计](./05-product-correctness-design.md) | 四层防线 + AC即功能规格 + 失败可恢复 |
-| 06 | [工具与实战工作流](./06-tools-workflow-practice.md) | 工具栈 + 周度节奏 + 失败案例复盘 |
+| 序号 | 文档 | 解决的核心问题 |
+|------|------|---------------|
+| 01 | [Kernel 与 Userspace](./01-kernel-userspace.md) | 独立验收架构 — 你的反馈机制第 1 问 |
+| 02 | [Scheduler 调度器](./02-scheduler.md) | 任务治理 — 优先级、防死锁、僵尸回收 |
+| 03 | [Memory 记忆管理](./03-memory-management.md) | 知识分层 — Hot/Warm/Cold + 遗忘曲线 |
+| 04 | [Watchdog 看门狗](./04-watchdog.md) | 运行时安全 — 熔断、预算、循环检测 |
+| 05 | [Supervisor 生命周期](./05-supervisor-lifecycle.md) | Agent 治理 — fork/exec/wait/kill/signal |
+| 06 | [Journal 审计日志](./06-journal-audit.md) | 不可变追踪 — 你的产品正确性第 2 问 |
+| 07 | [AI Product OS 完整蓝图](./07-full-blueprint.md) | 全部子系统组装为完整架构 |
+
+## 设计哲学
+
+> **好的产品经理设计的是"操作系统"，不是"应用程序"。**
+>
+> 应用程序跑完就结束。操作系统永远在后台运行，管理资源、调度任务、处理异常、保障安全、记录一切。
+>
+> AI PM 的工作不是写 Prompt（那是写应用程序），而是设计让 Prompt/Agent/模型在上面安全运行的整个操作系统。
