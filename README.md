@@ -1,27 +1,24 @@
 # AI-Rules
 
-AI 驱动的产品开发方法论与规则体系。研究如何让 AI 成为合格的产品经理，建立有效的反馈机制，确保产品正确性与用户体验。
-
-## 目录结构
-
-```
-AI-Rules/
-├── product-manager/     # AI 产品经理方法论
-│   ├── 01-ai-as-pm.md           # AI 如何成为合格的产品经理
-│   ├── 02-feedback-mechanism.md # 反馈机制设计
-│   ├── 03-product-correctness.md # 产品正确性保障
-│   ├── 04-evaluation-framework.md # 评测框架体系
-│   └── 05-tools-and-workflow.md  # 工具与工作流
-├── coding/              # 编码开发规则
-├── life/                # 人生思考
-└── research/            # 本地调研
-```
+AI 驱动的产品开发方法论与规则体系。
 
 ## 核心命题
 
-两个核心问题驱动全部研究：
+1. **反馈机制** — 什么样的设计能保证反馈本身正确，最终产品正确？
+2. **产品设计** — 如何设计产品来保证正确性，最终达成更好用户体验？
 
-1. **反馈机制** — 什么样的设计能保证反馈机制正确，最终确保产品正确？
-2. **产品设计** — 如何设计产品来保证正确性，最终达成更好的用户体验？
+## 目录
 
-核心目标（更好的用户体验）驱动实现，反馈机制作为约束保证大模型的工作始终朝向最终目标。
+```
+AI-Rules/
+├── product-manager/         # AI 产品经理方法论（6 份深度文档）
+│   ├── 01-ai-pm-role-transformation.md      # 角色转型：Governor & Builder
+│   ├── 02-feedback-loop-architecture.md     # 反馈回路：Loop/Harness/Memory
+│   ├── 03-independent-verification-systems.md # 独立验证：8 种架构
+│   ├── 04-evaluation-framework.md           # 评测框架：1+3 法 + 三层漏斗
+│   ├── 05-product-correctness-design.md     # 正确性设计：四层防线
+│   └── 06-tools-workflow-practice.md        # 工具实战：周度节奏 + 失败复盘
+├── coding/                  # 编码开发规则
+├── life/                    # 人生思考
+└── research/                # 本地调研
+```
